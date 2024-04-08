@@ -5,4 +5,4 @@ main.o: main.c
 functions.o:functions.c
 	gcc -c functions.c
 clean:
-	rm car_deals*.0
+	rm car_deals*.o
