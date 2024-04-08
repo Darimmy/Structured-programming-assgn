@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "functions.h"
 
 struct Car
  {
@@ -11,3 +12,10 @@ struct Car
 struct vehicle {
 struct Car cars[10];
 };
+
+int main(int argc, char const *argv[])
+{
+	populate_vehicle();
+	print_vehicle();
+	return 0;
+}
