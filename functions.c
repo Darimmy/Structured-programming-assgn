@@ -1,29 +1,19 @@
 #include <stdio.h>
-void populate_vehicle(struct vehicle *class) {
-    int i;
-    for (i = 0; i < 10; i++) {
-        printf("Enter vehicle brand %d: ", i + 1);
-        scanf("%s", (*class).cars[i].brand);
-        printf("Enter vehicle model %d: ", i + 1);
-        scanf("%s", (*class).cars[i].model);
-        printf("Enter year of production %d: ", i + 1);
-        scanf("%d", &(*class).cars[i].year);
+#include "functions.h"
+
+void populateCar(struct Cars car[10]) {
+    for (int i = 0; i < 10; i++) {
+        printf("Enter the Brand of the vehicle %d: ", i+1);
+        scanf("%s", car[i].brand);
+
+        printf("Enter the model of the vehicle %d: ", i+1);
+        scanf("%s", car[i].model);
     }
 }
 
-void print_vehicle(struct vehicle *class) {
-    int i;
-    for (i = 0; i < 10; i++) {
-        printf("\nCar %d:\n", i + 1);
-        printf("Brand: %s\n", (*class).cars[i].brand);
-        printf("Model: %s\n", (*class).cars[i].model);
-        printf("Year: %d\n", (*class).cars[i].year);
+void printCar(struct Cars car[10]) {
+    printf("\nAvailable cars include:\n");
+    for (int i = 0; i < 10; i++) {
+        printf("Cars %d: %s by %s\n", i+1, car[i].brand, car[i].model);
     }
-}
-
-int main() {
-    struct vehicle class;
-    populate_vehicle(&class);
-    print_vehicle(&class);
-    return 0;
 }
