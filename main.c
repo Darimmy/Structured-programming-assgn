@@ -1,21 +1,11 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include "functions.h"
 
-struct Car
- {
-     char brand[50];
-     char model[50];
-     int year;
-};
+int main() {
+    struct Cars car[10];
 
-struct vehicle {
-struct Car cars[10];
-};
+    populateCar(car);
+    printCar(car);
 
-int main(int argc, char const *argv[])
-{
-	populate_vehicle();
-	print_vehicle();
-	return 0;
+    return 0;
 }
