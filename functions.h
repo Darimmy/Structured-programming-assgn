@@ -4,6 +4,7 @@
 struct Cars {
     char brand[50];
     char model[50];
+    int year[4];
 };
 
 void populateCar(struct Cars[]);
